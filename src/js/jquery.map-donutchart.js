@@ -200,6 +200,7 @@ $.fn.mapDonutChart.defaults = {
     lng: -82.0789857
   },
   textLabel: false,
+  hoverAction: false,
   data: [
     {
       "name" : "Hong Kong",

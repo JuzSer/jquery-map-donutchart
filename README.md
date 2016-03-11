@@ -17,10 +17,23 @@ A kademi project
   - I think that's all to get started. Please create a public github repo for the project. This can be standalone with a static json file, and we will integrate it with dynamic data in Kademi when your finished
   - Of course you config options for location of json file etc
 
+## Config
+  - `max` is Maximum radius of an item
+  - `center` is lat, long center of map
+  - `textLabel` default `false` is enable label for each item
+  - `hoverAction` default `false` is enable action hover for donut chart
+
 ##Data
 ```
 {
-    "locations" : [
+    max: 40,
+    center: {
+      lat: 28.8373639,
+      lng: -82.0789857
+    },
+    textLabel: false,
+    hoverAction: false,
+    "data" : [
         {
             "name" : "Hong Kong",
             "location" : {
