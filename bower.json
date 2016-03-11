@@ -1,0 +1,14 @@
+{
+  "name": "jquery-map-donutchart",
+  "version": "0.0.1",
+  "description": "jquery map donut chart",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+      "jquery": "~1.11",
+      "bootstrap": "3.*",
+      "html5shiv": "*",
+      "respond": "*",
+      "d3": "*"
+  }
+}

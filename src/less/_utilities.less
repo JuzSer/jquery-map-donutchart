@@ -1,0 +1,136 @@
+// Spacing
+// ------
+.nm {
+  margin: 0;
+}
+.np {
+  padding: 0;
+}
+.nvm {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.nvp {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.nhp {
+  padding-left: 0;
+  padding-right: 0;
+}
+.nml {
+  margin-left: 0;
+}
+.nmr {
+  margin-right: 0;
+}
+
+// 
+.spacing (@index) when (@index>1) {
+  .mv@{index}x {
+    margin-top: @index*@mainSpacing;
+    margin-bottom: @index*@mainSpacing;
+  }
+  .mt@{index}x {
+    margin-top: @index*@mainSpacing;
+  }
+  .mb@{index}x {
+    margin-bottom: @index*@mainSpacing;
+  }
+
+
+  .pv@{index}x {
+    padding-top: @index*@mainSpacing;
+    padding-bottom: @index*@mainSpacing;
+  }
+  .ph@{index}x {
+    padding-left: @index*@mainSpacing;
+    padding-right: @index*@mainSpacing;
+  }
+
+  .spacing(@index - 1);
+}
+.spacing (@index) when (@index=1) {
+  .mv {
+    margin-top: @mainSpacing;
+    margin-bottom: @mainSpacing;
+  }
+  .mt {
+    margin-top: @mainSpacing;
+  }
+  .mb {
+    margin-bottom: @mainSpacing;
+  }
+  .pd {
+    padding-top: @mainSpacing;
+    padding-bottom: @mainSpacing;
+    padding-left: @mainSpacing;
+    padding-right: @mainSpacing;
+  }
+  .pv {
+    padding-top: @mainSpacing;
+    padding-bottom: @mainSpacing;
+  }
+  .ph {
+    padding-left: @mainSpacing;
+    padding-right: @mainSpacing;
+  }
+  .pt {
+    padding-top: @mainSpacing;
+  }
+  .pb {
+    padding-bottom: @mainSpacing;
+  }
+  .pl {
+    padding-left: @mainSpacing;
+  }
+  .pr {
+    padding-right: @mainSpacing;
+  }
+}
+.spacing(5);
+
+
+// Utilities
+// ---------
+.overlay {
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.4;
+    .transition(opacity linear .5s);
+  }
+}
+.full-cover {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.v-middle {
+  display: block;
+  position: absolute;
+  top: 50%;
+  .translate(0, -50%);
+}
+
+.vh-middle,
+.oe-float-centered {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  .translate(-50%, -50%);
+}
+.full-height {
+  height: 100%;
+}
